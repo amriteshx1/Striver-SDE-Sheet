@@ -1,4 +1,4 @@
-// Kadane's Algorithm
+// Kadane's Algorithm (Optimal One)
 
 // Brute
 
