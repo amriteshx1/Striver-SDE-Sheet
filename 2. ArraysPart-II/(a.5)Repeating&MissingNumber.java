@@ -44,3 +44,30 @@ class Solution {
         return arr;
     }
 }
+
+
+// Optimal Approach
+
+class Solution {
+    public int[] findMissingRepeatingNumbers(int[] nums) {
+        long n = nums.length;
+        long sN = n * (n + 1) / 2;
+        long s2N = (n * (n + 1) * (2 * n + 1)) / 6;
+        long s = 0;
+        long s2 = 0;
+
+        for(int i = 0 ; i < nums.length; i++){
+            s += (long)nums[i];
+            s2 += (long)nums[i] * (long)nums[i];
+        }
+
+        long val1 = s - sN;   // x - y
+        long val2 = s2 - s2N; // x^2 - y ^2 -> (x + y)(x - y)
+
+        val2 = val2 / val1;  // x + y
+        long x = (val1 + val2) / 2;
+        long y = x - val1;
+
+        return new int[]{(int)x , (int)y};
+    }
+}
