@@ -45,6 +45,10 @@ class Solution {
         int n = matrix.length;
         int m = matrix[0].length;
 
+        if (matrix == null || n == 0 || m == 0) {
+            return false;
+        }
+
         int low = 0;
         int high = (n * m) - 1;
 
