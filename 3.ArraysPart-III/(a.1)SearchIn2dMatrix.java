@@ -17,11 +17,11 @@ class Solution {
     }
 }
 
-// Better
+// Better (This one's the optimal solution for Leetcode's Search a 2D Matrix II problem)
 
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-         int i = 0;
+        int i = 0;
         int j = matrix[0].length - 1;
 
         while(i < matrix.length && j >= 0){
