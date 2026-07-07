@@ -1,3 +1,5 @@
+// Optimal solution is to use Dutch National Flag Algorithm which uses 3 pointers low, mid and high.
+
 // Brute
 
 // -> Use any sorting algorithm like merge sort etc. to sort the array and then return the sorted array.
