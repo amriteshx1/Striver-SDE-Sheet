@@ -81,6 +81,8 @@ public class Solution {
 }
 
 // Optimal (without extra space and without calculating length)
+
+// basically we are traversing both the linked list and when we reach the end of one linked list we will point it to the head of the other linked list. In this way both the pointers will traverse equal distance and will meet at the intersection point.
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if(headA == null || headB == null) return null;
