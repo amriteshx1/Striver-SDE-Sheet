@@ -26,7 +26,7 @@ public class Solution {
     }
 }
 
-// Better (using tortise and hare approach)
+// Optimal (Floyd's Cycle Detection Algorithm using the tortoise and hare technique)
 public class Solution {
     public boolean hasCycle(ListNode head) {
         ListNode slow = head;
