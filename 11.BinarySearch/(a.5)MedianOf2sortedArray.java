@@ -43,3 +43,62 @@ class Solution {
     }
 }
 
+// Better way - Instead of additional space of new array, we can use 2 pointers to find the median. We can keep track of the count of elements we have seen so far and when we reach the middle element(s), we can return the median.
+
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+
+        int total = m + n;
+        int first = (total - 1) / 2;
+        int second = total / 2;
+
+        int temp1 = 0;
+        int temp2 = 0;
+        int count = 0;
+
+        int firstElement = 0;
+        int secondElement = 0;
+
+        while (temp1 < m && temp2 < n) {
+            int current;
+
+            if (nums1[temp1] <= nums2[temp2]) {
+                current = nums1[temp1];
+                temp1++;
+            } else {
+                current = nums2[temp2];
+                temp2++;
+            }
+
+            if (count == first) firstElement = current;
+            if (count == second) secondElement = current;
+
+            count++;
+        }
+
+        while (temp1 < m) {
+            int current = nums1[temp1];
+            if (count == first) firstElement = current;
+            if (count == second) secondElement = current;
+            temp1++;
+            count++;
+        }
+
+        while (temp2 < n) {
+            int current = nums2[temp2];
+            if (count == first) firstElement = current;
+            if (count == second) secondElement = current;
+            temp2++;
+            count++;
+        }
+
+        if (total % 2 == 1) {
+            return firstElement;
+        } else {
+            return (double) (firstElement + secondElement) / 2;
+        }
+    }
+}
+
