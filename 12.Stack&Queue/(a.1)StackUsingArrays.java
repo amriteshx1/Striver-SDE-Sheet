@@ -3,7 +3,7 @@ class ArrayStack {
     int top;
 
     public ArrayStack() {
-        arr = new int[1000]; // stack size
+        arr = new int[1000];
         top = -1;
     }
 
