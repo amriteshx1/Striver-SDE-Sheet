@@ -1,3 +1,5 @@
+// Brute approach would be to use two loops and check for each element the next greater element. But that would take O(n^2) time complexity. Instead, we can use a stack to keep track of the next greater elements in O(n) time complexity.
+
 class Solution {
     public int[] nextLargerElement(int[] arr) {
         int[] num = new int[arr.length];
