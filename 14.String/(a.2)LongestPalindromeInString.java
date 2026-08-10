@@ -11,7 +11,7 @@ class Solution {
             int right = i;
 
             while(left >= 0 && right < n && s.charAt(left) == s.charAt(right)){
-                if(left - right + 1 > ans.length()){
+                if(right - left + 1 > ans.length()){
                     ans = s.substring(left, right + 1);
                 }
 
@@ -23,7 +23,7 @@ class Solution {
             right = i + 1;
 
             while(left >= 0 && right < n && s.charAt(left) == s.charAt(right)){
-                if(left - right + 1 > ans.length()){
+                if(right - left + 1 > ans.length()){
                     ans = s.substring(left, right + 1);
                 }
 
