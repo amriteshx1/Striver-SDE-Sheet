@@ -15,7 +15,7 @@ class Solution {
 
             int j = i;
 
-            // get the first word end
+            // get the word end
             while(j >= 0 && s.charAt(j) != ' '){
                 j--;
             }
