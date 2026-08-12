@@ -1,4 +1,4 @@
-// be sure to revise this properly and understand entirely. link of previous one chat: https://chatgpt.com/share/6a797cb6-5ee4-83ee-9245-fd583fceef8f
+// be sure to revise this properly and understand entirely (code i am talking about). link of previous one chat: https://chatgpt.com/share/6a797cb6-5ee4-83ee-9245-fd583fceef8f
 
 // Optimal
 
