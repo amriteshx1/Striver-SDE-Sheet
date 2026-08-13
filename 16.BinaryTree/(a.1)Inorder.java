@@ -38,3 +38,21 @@ class Solution {
         return list;
     }
 }
+
+// recursive way
+
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> in = new ArrayList<>();
+        infn(root, in);
+        return in;
+    }
+
+    private void infn(TreeNode root, List<Integer> in){
+        if(root == null) return;
+
+        infn(root.left, in);
+        in.add(root.val);
+        infn(root.right, in);
+    }
+}
